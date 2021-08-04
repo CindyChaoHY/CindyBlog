@@ -4,7 +4,7 @@ const routerBase =
   process.env.DEPLOY_ENV === 'master'
     ? {
         router: {
-          base: '/CindyBlog/'
+          base: '/CindyBlog/static'
         }
       }
     : {}
