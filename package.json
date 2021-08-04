@@ -7,13 +7,13 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "build:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt build",
-    "generate:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt generate"
+    "deploy": "push-dir --dir=dist --branch=GH_PAGES --cleanup"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3",
     "core-js": "^3.15.1",
     "nuxt": "^2.15.7",
+    "push-dir": "^0.4.1",
     "vue-scrollto": "^2.20.0",
     "vuetify": "^2.5.5"
   },
