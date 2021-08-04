@@ -1,10 +1,10 @@
 import colors from 'vuetify/es5/util/colors'
 
 const routerBase =
-  process.env.DEPLOY_ENV === 'master'
+  process.env.DEPLOY_ENV === 'GH_PAGES'
     ? {
         router: {
-          base: '/CindyBlog/static'
+          base: '/CindyBlog/'
         }
       }
     : {}
