@@ -122,9 +122,9 @@
             :height="imageHeight"
           >
             <v-carousel-item
-              v-for="idx in 12"
+              v-for="idx in 15"
               :key="idx"
-              :src="`/handmade/Gadgelets__${idx}.jpeg`"
+              :src="getGadgeletsImage(idx)"
               :style="`width: ${imageWidth}px;`"
             ></v-carousel-item>
           </v-carousel>
@@ -147,7 +147,7 @@
             <v-carousel-item
               v-for="idx in 6"
               :key="idx"
-              :src="`/baseball/Baseball__${idx}.jpeg`"
+              :src="getBaseballImage(idx)"
               :style="`width: ${imageWidth}px;`"
             ></v-carousel-item>
           </v-carousel>
@@ -188,7 +188,7 @@
             <v-carousel-item
               v-for="idx in 20"
               :key="idx"
-              :src="`/food/Food__${idx}.jpeg`"
+              :src="getFoodImage(idx)"
               :style="`width: ${imageWidth}px;`"
             ></v-carousel-item>
           </v-carousel>
@@ -218,7 +218,17 @@ export default {
   },
 
   methods: {
+    getGadgeletsImage (idx) {
+      return require(`@/assets/img/handmade/Gadgelets__${idx}.jpeg`)
+    },
 
+    getBaseballImage (idx) {
+      return require(`@/assets/img/baseball/Baseball__${idx}.jpeg`)
+    },
+
+    getFoodImage (idx) {
+      return require(`@/assets/img/food/Food__${idx}.jpeg`)
+    }
   }
 
 }
