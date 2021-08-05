@@ -15,7 +15,7 @@
 
         <v-img
           class="white--text align-center"
-          src="/home/cindy__2.jpeg"
+          :src="homeImg"
         >
           <span class="card--top--title">CINDY</span>
         </v-img>
@@ -41,7 +41,7 @@
           style="padding-top: 0px;"
         >
           <v-img
-            src="/about/cindy.jpeg"
+            :src="aboutImg"
           >
           </v-img>
         </v-col>
@@ -210,7 +210,10 @@ export default {
     return {
       imageHeight: 'auto', // '542',
       imageWidth: 'auto', // '407',
-      imageInterval: '1500'
+      imageInterval: '1500',
+
+      homeImg: require('@/assets/img/cindy.jpeg'),
+      aboutImg: require('@/assets/img/about/cindy.jpeg')
     }
   },
 
