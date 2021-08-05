@@ -257,7 +257,7 @@ export default {
 
   &--title {
     font-family: 'PingFangTC' !important;
-    display: block;
+    display: block !important;
     padding: 20px 0px;
   }
 
