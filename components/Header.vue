@@ -1,5 +1,5 @@
 <template>
-  <div style="height: 60px; padding: 0 20px;">
+  <div style="height: 60px;">
     <v-toolbar class="header" dense>
       <!-- <v-app-bar-nav-icon></v-app-bar-nav-icon> -->
 
@@ -76,7 +76,7 @@ export default {
 <style lang="scss">
 .header {
   height: 60px !important;
-  position: fixed;
+  position: fixed !important;
   top: 0;
   left: 0;
   width: 100%;

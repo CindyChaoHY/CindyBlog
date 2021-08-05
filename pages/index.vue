@@ -30,7 +30,7 @@
           xs="12"
         >
           <v-card-title class="card--title">
-            <h2 class="text-center">關於Cindy</h2>
+            <div class="text-center text-h4 card--sub--title">關於Cindy</div>
           </v-card-title>
         </v-col>
 
@@ -94,7 +94,7 @@
           xs="12"
         >
           <v-card-title class="card--title">
-            <h2 class="text-center">Cindy生活</h2>
+            <div class="text-center text-h4 card--sub--title">Cindy生活</div>
           </v-card-title>
         </v-col>
       </v-row>
@@ -261,6 +261,13 @@ export default {
     padding: 20px 0px;
   }
 
+  &--sub--title {
+    letter-spacing: 1px;
+    color: rgb(95, 158, 160);
+    padding: 70px 0 10px 0;
+    border-bottom: 1px solid rgba(95, 158, 160, 0.2);
+  }
+
   &--content {
     display: table;
   }
@@ -275,13 +282,6 @@ h1 {
   display: table-cell;
   text-align: center;
   color: rgba(77, 77, 77, 0.8);
-}
-
-h2 {
-  letter-spacing: 1px;
-  color: rgb(95, 158, 160);
-  padding: 70px 0 10px 0;
-  border-bottom: 1px solid rgba(95, 158, 160, 0.2);
 }
 
 .intro__block {
