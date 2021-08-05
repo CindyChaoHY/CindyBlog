@@ -75,7 +75,7 @@
             <br>
             曾經想自彈自唱一首歌<br>
             但那是我大學加入吉他社時候的夢想<br>
-            能彈不能唱，能唱不勿能彈<br>
+            能彈不能唱，能唱不能彈<br>
             最後放棄了吉他<br>
             投入烏克麗麗的懷抱<br>
             也圓了自己其實熱愛音樂愛唱歌的夢<br>
@@ -287,5 +287,19 @@ h1 {
 .intro__block {
   letter-spacing: 0.5px;
   padding: 0px 25px;
+}
+
+@media (max-width: 600px) {
+  .card--top--title {
+    font-size: 30px;
+    letter-spacing: 3px;
+  }
+}
+
+@media (max-width: 350px) {
+  .card--top--title {
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
 }
 </style>

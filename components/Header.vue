@@ -97,4 +97,11 @@ export default {
 .v-toolbar__content {
   height: 60px !important;
 }
+
+@media (max-width: 600px) {
+  .header--btn {
+    width: 40px !important;
+    margin: 5px;
+  }
+}
 </style>
