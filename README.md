@@ -1,2 +1,2 @@
 # CindyBlog
-My Blog
+Cindy Website
