@@ -133,6 +133,17 @@
 
       <!-- 棒球 -->
       <v-row>
+        <!-- mobile -->
+        <v-col
+          v-if="isMobile"
+          md="6"
+          sm="6"
+          xs="12"
+          class="card--content"
+        >
+          <h1>棒球</h1>
+        </v-col>
+
         <v-col
           md="6"
           sm="6"
@@ -154,6 +165,7 @@
         </v-col>
 
         <v-col
+          v-if="!isMobile"
           md="6"
           sm="6"
           xs="12"
@@ -214,6 +226,12 @@ export default {
 
       homeImg: require('@/assets/img/cindy.jpeg'),
       aboutImg: require('@/assets/img/about/cindy.jpeg')
+    }
+  },
+
+  computed: {
+    isMobile () {
+      return this.$vuetify.breakpoint.name === 'xs'
     }
   },
 
@@ -300,6 +318,10 @@ h1 {
   .card--top--title {
     font-size: 20px;
     letter-spacing: 2px;
+  }
+
+  .intro__block {
+    padding: 0px !important;
   }
 }
 </style>
