@@ -3,13 +3,12 @@
     <v-toolbar class="header" dense>
       <!-- <v-app-bar-nav-icon></v-app-bar-nav-icon> -->
 
-      <!-- ToDo: 放Cindy文字圖片-->
       <v-toolbar-title>
         <a
           @click="scrollToTop()"
         >
           <b class="header--home">
-            Cindy
+            <v-img :src="homeIcon" height="60" width="60"></v-img>
           </b>
         </a>
       </v-toolbar-title>
@@ -45,11 +44,29 @@
 
       <v-btn
         icon
-        class="header--btn"
+        class="header--link"
         href="https://www.instagram.com/cindy__handmade/"
         target="_blank"
       >
         <v-icon>mdi-instagram</v-icon>
+      </v-btn>
+
+      <v-btn
+        icon
+        class="header--link"
+        href="https://twitter.com/Cindy__Chao"
+        target="_blank"
+      >
+        <v-icon>mdi-twitter</v-icon>
+      </v-btn>
+
+      <v-btn
+        icon
+        class="header--link"
+        href="https://github.com/CindyChaoHY"
+        target="_blank"
+      >
+        <v-icon>mdi-github</v-icon>
       </v-btn>
 
     </v-toolbar>
@@ -59,6 +76,11 @@
 
 <script>
 export default {
+  data () {
+    return {
+      homeIcon: require('@/assets/img/cindy_icon.jpg')
+    }
+  },
 
   methods: {
     scrollToTop() {
@@ -81,6 +103,7 @@ export default {
   left: 0;
   width: 100%;
   z-index: 999;
+  background: rgba(148, 229, 210, 0.2) !important;
 
   &--home {
     color: rgb(95, 158, 160);
@@ -92,16 +115,27 @@ export default {
     width: 50px !important;
     margin: 10px;
   }
+
+  &--link {
+    width: 40px !important;
+    margin: 0px !important;
+  }
 }
 
 .v-toolbar__content {
   height: 60px !important;
+  padding: 0px 16px 0px 0px !important;
 }
 
 @media (max-width: 600px) {
   .header--btn {
     width: 40px !important;
     margin: 5px;
+  }
+
+  .header--link {
+    width: 30px !important;
+    margin: 0px;
   }
 }
 </style>
