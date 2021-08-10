@@ -118,6 +118,7 @@
           <v-carousel
             hide-delimiters
             :interval="imageInterval"
+            :height="imageHeight"
           >
             <v-carousel-item
               v-for="idx in 15"
@@ -150,6 +151,7 @@
           <v-carousel
             hide-delimiters
             :interval="imageInterval"
+            :height="imageHeight"
           >
             <v-carousel-item
               v-for="idx in 6"
@@ -186,10 +188,12 @@
           md="6"
           sm="6"
           xs="12"
+          ref="image"
         >
           <v-carousel
             hide-delimiters
             :interval="imageInterval"
+            :height="imageHeight"
           >
             <v-carousel-item
               v-for="idx in 20"
@@ -214,13 +218,28 @@ export default {
 
   data () {
     return {
-      imageHeight: 'auto', // '542',
-      imageWidth: 'auto', // '407',
+      imageHeight: '',
+      imageWidth: '',
       imageInterval: '1500',
+      windowWidth: window.innerWidth,
 
       homeImg: require('@/assets/img/cindy.jpeg'),
       aboutImg: require('@/assets/img/about/cindy.jpeg')
     }
+  },
+
+  watch: {
+    windowWidth() {
+      this.resizeImage()
+    }
+  },
+
+  mounted() {
+    this.resizeImage()
+
+    this.$nextTick(() => {
+      window.addEventListener('resize', this.onResize)
+    })
   },
 
   computed: {
@@ -240,6 +259,15 @@ export default {
 
     getFoodImage (idx) {
       return require(`@/assets/img/food/Food__${idx}.jpeg`)
+    },
+
+    onResize() {
+      this.windowWidth = window.innerWidth
+    },
+
+    resizeImage () {
+      this.imageWidth = this.$refs.image.clientWidth
+      this.imageHeight = this.$refs.image.clientWidth * 4 / 3
     }
   }
 
