@@ -117,9 +117,7 @@
         >
           <v-carousel
             hide-delimiters
-
             :interval="imageInterval"
-            :height="imageHeight"
           >
             <v-carousel-item
               v-for="idx in 15"
@@ -151,9 +149,7 @@
         >
           <v-carousel
             hide-delimiters
-
             :interval="imageInterval"
-            :height="imageHeight"
           >
             <v-carousel-item
               v-for="idx in 6"
@@ -193,9 +189,7 @@
         >
           <v-carousel
             hide-delimiters
-
             :interval="imageInterval"
-            :height="imageHeight"
           >
             <v-carousel-item
               v-for="idx in 20"
