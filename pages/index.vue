@@ -309,7 +309,9 @@ export default {
   }
 
   &--content {
-    display: table;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
