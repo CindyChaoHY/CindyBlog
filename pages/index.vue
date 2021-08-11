@@ -309,8 +309,7 @@ export default {
   }
 
   &--content {
-    display: flex;
-    align-items: center;
+    display: flex !important;
     justify-content: center;
   }
 }
@@ -320,8 +319,8 @@ export default {
 }
 
 h1 {
-  vertical-align: middle !important;
-  display: table-cell !important;
+  display: flex;
+  align-items: center;
   text-align: center;
   color: rgba(77, 77, 77, 0.8);
 }
