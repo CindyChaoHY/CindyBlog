@@ -124,7 +124,7 @@
               v-for="idx in 15"
               :key="idx"
               :src="getGadgeletsImage(idx)"
-              :style="`width: ${imageWidth}px;`"
+              :style="`width: ${isMobile ? imageWidth : ''}px`"
             ></v-carousel-item>
           </v-carousel>
         </v-col>
@@ -157,7 +157,7 @@
               v-for="idx in 6"
               :key="idx"
               :src="getBaseballImage(idx)"
-              :style="`width: ${imageWidth}px;`"
+              :style="`width: ${isMobile ? imageWidth : ''}px`"
             ></v-carousel-item>
           </v-carousel>
         </v-col>
@@ -199,7 +199,7 @@
               v-for="idx in 20"
               :key="idx"
               :src="getFoodImage(idx)"
-              :style="`width: ${imageWidth}px;`"
+              :style="`width: ${isMobile ? imageWidth : ''}px`"
             ></v-carousel-item>
           </v-carousel>
         </v-col>
@@ -318,8 +318,8 @@ export default {
 }
 
 h1 {
-  vertical-align: middle;
-  display: table-cell;
+  vertical-align: middle !important;
+  display: table-cell !important;
   text-align: center;
   color: rgba(77, 77, 77, 0.8);
 }
